@@ -97,12 +97,12 @@
             </div>
         </section>
         <!-- search result container -->
-        <section class="search-results-wrapper" id="recommendation-container" style="display: none;">
-            <div class="result-header-box">
+        <section class="search-results-wrapper" id="recommendations-container" style="display: none;">
+            <div class="results-header-box">
                 <div>
-                    <h2 class="result-header-title">
+                    <h2 class="results-header-title">
                         Search for recommendations for "<span class="results-query-highlight"
-                            id="result-query-label"></span>"
+                            id="results-query-label"></span>"
                     </h2>
                     <span id="results-count-label" style="font-size: 13px; color: rgba(255, 255, 255, 0.7);"></span>
                 </div>
@@ -134,6 +134,47 @@
             </div>
         </div>
     </div>
+    <!-- Booking Modal -->
+    <div class="modal-backdrop" id="booking-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Book Dream Destination</h3>
+                <button type="button" class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form
+                    onsubmit="event.preventDefault(); alert('Booking inquiry confirmed! A TravelBloom specialist will reach out shortly.'); closeBookingModal();">
+                    <div class="form-group">
+                        <label for="book-destination">Destination</label>
+                        <input type="text" id="book-destination" class="form-input"
+                            placeholder="e.g. Sydney or Bora Bora" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="book-name">Full Name</label>
+                        <input type="text" id="book-name" class="form-input" placeholder="Jane Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="book-email">Email Address</label>
+                        <input type="email" id="book-email" class="form-input" placeholder="jane@example.com"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="book-date">Travel Date</label>
+                        <input type="date" id="book-date" class="form-input" required />
+                    </div>
+                    <button type="submit" class="btn-submit">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 TravelBloom. All rights reserved. Travel Recommendation Website.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="travel_recommendation.js"></script>
 </body>
 
 </html
